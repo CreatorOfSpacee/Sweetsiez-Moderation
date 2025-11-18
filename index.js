@@ -1,7 +1,6 @@
 // index.js - SWEETSiEZ Moderation Bot (Option B with acknowledge-threads)
 // Matches your original bot style: express + discord.js + REST + process.env config
 
-const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const { Client, GatewayIntentBits, EmbedBuilder, SlashCommandBuilder, REST, Routes, PermissionFlagsBits, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
@@ -82,12 +81,6 @@ function nextCase(action, moderatorId, targetUserId, reason, extra = {}) {
   saveJson(CASES_FILE, cases);
   return record;
 }
-
-// ---------- Express (health) ----------
-const app = express();
-app.use(express.json());
-app.get('/', (req, res) => res.send('SWEETSiEZ Moderation Bot is running!'));
-app.listen(config.PORT, () => console.log(`Server running on port ${config.PORT}`));
 
 // ---------- Discord client ----------
 const client = new Client({
