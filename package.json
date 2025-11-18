@@ -1,0 +1,14 @@
+{
+  "name": "sweetsiez-moderation-bot",
+  "version": "1.0.0",
+  "description": "Moderation bot with consequence acknowledgment threads for Sweetsiez",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "@discordjs/rest": "^2.0.1",
+    "discord-api-types": "^0.37.60"
+  }
+}
